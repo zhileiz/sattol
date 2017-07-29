@@ -1,0 +1,25 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="admin-navbar">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a class="navbar-brand" href="#">
+      <img src="/assets/blog-logo-white.png" width="200" height="30" class="d-inline-block align-top"/>
+    </a>
+    <div class="collapse navbar-collapse"id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav main-navbar-menu">
+        <li class="nav-item">
+          <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'New', new_authors_post_path, class: "nav-link #{yield(:new_active)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Posts', authors_posts_path, class: "nav-link #{yield(:posts_active)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign Out', destroy_author_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+</nav>

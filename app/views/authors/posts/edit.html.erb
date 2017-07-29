@@ -1,0 +1,16 @@
+<% provide(:page_title, 'Edit') %>
+<% provide(:is_admin_page, 'yes') %>
+
+    <%= render 'layouts/admin_header' %>
+
+    <div class="row">
+      <div class="col-10 offset-1 text-center">
+        <h1>Edit Post</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-8 offset-2">
+      <%= render 'form', post: @post, form_url: authors_posts_path %>
+      </div>
+    </div>

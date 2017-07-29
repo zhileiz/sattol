@@ -1,0 +1,16 @@
+<% provide(:page_title, 'Posts') %>
+<% provide(:blog_active, 'active') %>
+<% provide(:is_admin_page, false) %>
+
+
+<%= render 'layouts/blog_header' %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-7 offset-1">
+    <% @posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+  </div>
+</div>

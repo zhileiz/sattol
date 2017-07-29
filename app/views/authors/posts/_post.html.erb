@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <h4><%=link_to post.title, post %></h4>
+  </td>
+  <td>
+    published
+  </td>
+  <td>
+    <%= link_to "Edit", edit_authors_post_path(post) %>
+  </td>
+  <td>
+    <%= link_to "Delete", authors_post_path(post), method: :delete %>
+  </td>
+</tr>

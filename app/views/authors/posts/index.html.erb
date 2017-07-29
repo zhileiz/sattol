@@ -1,0 +1,21 @@
+<% provide(:page_title, 'backend') %>
+<% provide(:posts_active, 'active') %>
+<% provide(:is_admin_page, true) %>
+    <%= render 'layouts/admin_header' %>
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-10 offset-1">
+  <table width="100%">
+    <tr>
+      <th>Posts Title</th>
+      <th>Publish Status</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <% @posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+  </table>
+</div>
+</div>

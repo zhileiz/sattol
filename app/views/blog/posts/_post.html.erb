@@ -1,0 +1,16 @@
+<div class="col post-each">
+  <div class="row">
+    <div class="col-5">
+      <img src="<%= post.banner_image_url %>" width="90%"/>
+    </div>
+    <div class="col-7">
+      <h4><%=link_to post.title, post %></h4>
+      <p class="published-date">
+        <%= post.display_day_published %>
+      </p>
+      <p class="card-text">
+        <%= truncate(post.description, length:200) %>
+      </p>
+    </div>
+  </div>
+</div>
