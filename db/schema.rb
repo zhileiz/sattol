@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170728022731) do
     t.string   "banner_image_url"
     t.integer  "author_id"
     t.boolean  "published",        default: false
+    t.datetime "published_at"
     t.index ["author_id"], name: "index_posts_on_author_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end

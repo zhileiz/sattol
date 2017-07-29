@@ -2,9 +2,16 @@
   <td>
     <h4><%=link_to post.title, post %></h4>
   </td>
+
+  <% if post.published %>
   <td>
-    published
+    <%= link_to "Unpublish", unpublish_authors_post_path(post), method: :put %>
   </td>
+  <% else %>
+  <td>
+    <%= link_to "Publish", publish_authors_post_path(post), method: :put %>
+  </td>
+  <% end %>
   <td>
     <%= link_to "Edit", edit_authors_post_path(post) %>
   </td>

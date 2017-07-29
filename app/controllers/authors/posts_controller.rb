@@ -1,11 +1,11 @@
 module Authors
   class PostsController < AuthorController
-    before_action :set_post, only: [:show, :edit, :update, :destroy]
+    before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
 
     # GET /posts
     # GET /posts.json
     def index
-      @posts = current_author.posts.most_recent
+      @posts = current_author.posts.recently_updated
     end
 
     # GET /posts/1
@@ -16,6 +16,18 @@ module Authors
     # GET /posts/new
     def new
       @post = Post.new
+    end
+
+    def publish
+      @post.update(published: true)
+      @post.update(published_at: Time.now)
+      redirect_to :back
+    end
+
+    def unpublish
+      @post.update(published: false)
+      @post.update(published_at: nil)
+      redirect_to :back
     end
 
     # GET /posts/1/edit
