@@ -5,7 +5,7 @@ module Authors
     # GET /posts
     # GET /posts.json
     def index
-      @posts = current_author.posts.recently_updated
+      @posts = current_author.posts.recently_updated.paginate(:page => params[:page], :per_page => 6)
     end
 
     # GET /posts/1
