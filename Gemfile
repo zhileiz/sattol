@@ -48,6 +48,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'font-awesome-sass'
 
 gem 'seed_dump'
+
+gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
