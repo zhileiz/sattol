@@ -1,21 +1,33 @@
 <tr>
   <td>
-    <h4><%=link_to post.title, post %></h4>
+    <%=link_to post.title, post %>
   </td>
 
   <% if post.published %>
   <td>
-    <%= link_to "Unpublish", unpublish_authors_post_path(post), method: :put %>
+    <%= link_to unpublish_authors_post_path(post), method: :put do%>
+      <i class="fa fa-times"></i>
+      UnPublish
+    <% end %>
   </td>
   <% else %>
   <td>
-    <%= link_to "Publish", publish_authors_post_path(post), method: :put %>
+    <%= link_to publish_authors_post_path(post), method: :put do%>
+      <i class="fa fa-check"></i>
+      Publish
+    <% end %>
   </td>
   <% end %>
   <td>
-    <%= link_to "Edit", edit_authors_post_path(post) %>
+    <%= link_to edit_authors_post_path(post) do%>
+      <i class="fa fa-pencil"></i>
+      Edit
+    <% end %>
   </td>
   <td>
-    <%= link_to "Delete", authors_post_path(post), method: :delete %>
+    <%= link_to authors_post_path(post), method: :delete do%>
+      <i class="fa fa-trash"></i>
+      Delete
+    <% end %>
   </td>
 </tr>
