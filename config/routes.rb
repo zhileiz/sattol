@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get 'about' => 'pages#about', as: :aboutpage
     get 'service' => 'pages#service', as: :servicepage
     get 'home' => 'pages#home', as: :homepage
+    get 'business' => 'pages#business', as: :businesspage
     get 'posts' => 'posts#index', as: :posts
     get 'posts/:id' => 'posts#show', as: :post
   end

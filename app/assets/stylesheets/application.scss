@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "fonts";
 
 html{
   height: 100%;
@@ -12,18 +13,19 @@ margin: 0 auto !important;
 float: none !important;
 }
 
-.header-area{
-  height:400px;
-  overflow: hidden;
-  position: relative;
-  background-color: black;
+.new-header-area{
+  height:90%;
+  background-image: url("/assets/bg-1.jpg");
+  background-size: auto 100%;
+  background-repeat: round;
   .navbar{
+    font-family: avenir-demi;
     z-index: 2;
     position: relative;
     background:none;
-    padding-left: 100px;
-    padding-top: 40px;
-    padding-right: 60px;
+    max-width: 90%;
+    margin: auto;
+    padding: 2%;
     .main-navbar-menu{
       .nav-link{
         color:white;
@@ -33,29 +35,59 @@ float: none !important;
         font-weight: 400;
       }
       .nav-link.active{
-        color: crimson;
+        color: #750609;
         font-weight: 800;
       }
     }
     filter: grayscale(0);
   }
-  #header-area-image{
-    position: absolute;
-    left: 0;
-    top: 0;
+  .info-area{
     width: 100%;
-    height: auto;
-    opacity: 0.6;
-  }
-  .header-area-title{
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    margin-top: 6%;
-    .title-center-content{
-      max-width: 50%;
+    margin-top: 15%;
+    background: none;
+    color:white;
+    h1{
+      padding: 0rem 2rem;
+      width: 90%;
       margin: auto;
+      font-size: 50px;
+      font-family: avenir-demi;
+    }
+    .line{
+      width: 100%;
+      height:5px;
+      background-color: #750609;
+      margin: 40px 0px;
+    }
+    h2{
+      font-size: 25px;
+      padding: 0rem 2rem;
+      width: 90%;
+      margin: auto;
+      font-family: avenir-regular;
+      letter-spacing: 1px;
+    }
+    .temp-btn-group{
+      padding: 0rem 2rem;
+      width: 90%;
+      margin: auto;
+      #learn{
+        font-size: 15px;
+        font-family: avenir-regular;
+        padding: 10px 30px;
+        background-color: #750609;
+        border: none;
+      }
+      #learn :hover{
+        background-color: #750609;
+        border: none;
+      }
+      #store{
+        height: 38px;
+        width: 138px;
+        background-image: url("/assets/appstore.png");
+        background-size: 100%;
+      }
     }
   }
 }
@@ -66,7 +98,7 @@ float: none !important;
     color: white;
   }
   .nav-link.active{
-    color: crimson;
+    color: #750609;
     font-weight: 800;
   }
 }
@@ -89,39 +121,12 @@ float: none !important;
 
 #home-header{
   height:100%;
-  .header-area-title{
-    text-align: left;
-    left: 100px;
-    margin-top: 20%;
-    .title-center-content{
-      max-width: 100%;
-      margin: auto;
-      h1{
-        font-size: 50px;
-      }
-      .band{
-        height: 10px;
-        width: 80%;
-        background-color: crimson;
-        margin-bottom: 10px;
-      }
-      .col-2{
-        text-align: left;
-        padding: 0px;
-      }
-      .header-action-btn{
-        height: 50px;
-        width: 120px;
-        background-color: crimson;
-        margin-left: 15px;
-      }
-    }
-  }
 }
 
 .section-title{
+  font-family: avenir-bold;
   padding: 40px;
-  color:crimson;
+  color:#750609;
   letter-spacing: 5px;
 }
 
@@ -130,22 +135,27 @@ float: none !important;
     text-align: center;
   }
   .exp-lang{
-    margin: 10px;
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    font-family: avenir-regular;
+
   }
   margin-bottom: 30px;
 }
 
 .section-2{
-  background-color: crimson;
+  background-color: #750609;
   .col-4{
     text-align: center;
   }
-  margin-bottom: 60px;
   color:white;
   .exp-lang{
     margin:10px;
     margin-bottom:30px;
+    font-family: avenir-regular;
   }
+  padding-bottom: 40px;
 }
 
 #sc-2-title{
@@ -158,4 +168,72 @@ float: none !important;
 
 #admin-a-title{
   color: white;
+}
+
+.exp-lang-title{
+  font-family: avenir-demi;
+  padding-bottom: 10px;
+  color:#750609;
+}
+
+.footer{
+    font-family: avenir-regular;
+  padding:20px;
+  background-color: #750609;
+  color: white;
+  p{
+    margin-bottom: 0px;
+  }
+  a{
+    color: white;
+  }
+}
+
+.form-section{
+  font-family: avenir-demi;
+  .section-title{
+    font-family: avenir-demi;
+    text-align: center;
+    color:#750609;
+  }
+  button{
+    background-color: #750609;
+    border:none;
+    padding:10px 50px;
+    letter-spacing: 1px;
+    font-family: avenir-regular;
+  }
+  input{
+    border: 3px solid #750609;
+    padding: 12px 15px;
+    border-radius: 0px;
+    line-height: 25px;
+  }
+  textarea{
+    border: 3px solid #750609;
+    border-radius: 0px;
+    padding: 12px 15px;
+    line-height: 25px;
+  }
+  padding-bottom: 30px;
+}
+
+.footer-input{
+    font-family: avenir-demi;
+  input{
+    border: 3px solid white;
+    border-radius: 0px;
+    background-color: #750609;
+    color: white;
+  }
+  .input-group-addon{
+    background-color: white;
+    border-radius: 0px;
+    border: 3px solid white;
+    color: #750609;
+  }
+}
+
+#business-info-area{
+  margin-top: 12%;
 }

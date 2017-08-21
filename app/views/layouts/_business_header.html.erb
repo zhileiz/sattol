@@ -1,0 +1,61 @@
+<div class="new-header-area" id="business-header">
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <%= link_to root_path, class: "navbar-brand" do%>
+        <img src="/assets/ucheck.png" width="200" height="33" class="d-inline-block align-top"/>
+      <% end %>
+      <div class="collapse navbar-collapse"id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav main-navbar-menu">
+          <li class="nav-item">
+            <%= link_to 'HOW IT WORKS', "#{root_path}#how-it-works", class: "nav-link #{yield(:none_active)}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'BENEFITS', "#{root_path}#benefits", class: "nav-link #{yield(:none_active)}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'BUSINESS', businesspage_path, class: "nav-link #{yield(:none_active)}" %>
+          </li>
+          <% if author_signed_in? %>
+          <li class="nav-item">
+            <%= link_to '#ADMIN#', authors_posts_path, class: "nav-link #{yield(:posts_active)}" %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+  </nav>
+  <div class="info-area" id="business-info-area">
+    <h1 id="business-info-h1"> Save the checkout hassle <br/>for your customer</h1>
+    <div class="line"></div>
+    <h2 id="business-info-h2"> UCheck lets your customers checkout on their phones within < 30s</h2>
+    <div class="temp-btn-group" style="margin-top:40px;">
+      <button type="button" class="btn btn-primary btn-lg" id="learn">Learn More</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  console.log("reached here");
+  var counter = 0;
+  var header = document.getElementById('business-header');
+  var h1 = document.getElementById('business-info-h1');
+  var h2 = document.getElementById('business-info-h2');
+
+  function change(){
+    if (counter % 2 == 0){
+        header.style.backgroundImage = "url('/assets/bg-2.png')";
+        h1.innerHTML = "Engage with your customers <br/> in real time";
+        h2.innerHTML = "UCheck helps you better understand their preferences and <br/> personalize recommendations during and after their visits";
+    } else {
+        header.style.backgroundImage = "url('/assets/bg-1.jpg')";
+        h1.innerHTML = "Save the checkout hassle <br/>for your customer";
+        h2.innerHTML = "UCheck lets your customers checkout on their phones within < 30s";
+    }
+    counter++;
+  }
+
+  var t = setInterval(change, 5000);
+
+</script>

@@ -1,10 +1,10 @@
-<div class="header-area" id="home-header">
+<!-- <div class="header-area" id="home-header">
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
       <%= link_to root_path, class: "navbar-brand" do%>
-        <img src="/assets/ucheck-temp-white.png" width="200" height="40" class="d-inline-block align-top"/>
+        <img src="/assets/ucheck.png" width="200" height="33" class="d-inline-block align-top"/>
       <% end %>
       <div class="collapse navbar-collapse"id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto"></ul>
@@ -29,23 +29,50 @@
         </ul>
       </div>
   </nav>
+  <div class="header-info-area" style="z-index:2;">
+    <div class="header-title">
+      <h1> Mobile Self-Checkout in 30s </h1>
+    </div>
+  </div>
   <img src="/assets/shop-bg.png" id="header-area-image"/>
-  <div class="header-area-title">
-    <div class="title-center-content">
-      <h5> UCheck </h5>
-      <h1> 30s GRAB & GO</h1>
-      <h1> IN REALITY</h1>
-      <div class="band"></div>
-      <h5> UCheck lets customers checkout themselves on mobile phones in < 30 seconds.</h5>
-      <div class="row">
-        <div class="col-2">
-          <div class="header-action-btn"></div>
-        </div>
-        <div class="col-2">
-          <div class="header-action-btn"></div>
-        </div>
+</div> -->
 
+<div class="new-header-area">
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <%= link_to root_path, class: "navbar-brand" do%>
+        <img src="/assets/ucheck.png" width="200" height="33" class="d-inline-block align-top"/>
+      <% end %>
+      <div class="collapse navbar-collapse"id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav main-navbar-menu">
+          <li class="nav-item">
+            <%= link_to 'HOW IT WORKS', "#{root_path}#how-it-works", class: "nav-link #{yield(:none_active)}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'BENEFITS', "#{root_path}#benefits", class: "nav-link #{yield(:none_active)}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'BUSINESS', businesspage_path, class: "nav-link #{yield(:none_active)}" %>
+          </li>
+          <% if author_signed_in? %>
+          <li class="nav-item">
+            <%= link_to '#ADMIN#', authors_posts_path, class: "nav-link #{yield(:posts_active)}" %>
+          </li>
+          <% end %>
+        </ul>
       </div>
+  </nav>
+  <div class="info-area">
+
+    <h1> Mobile Self-Checkout in 30s </h1>
+    <div class="line"></div>
+    <h2> Join UCheck today, and skip the checkout lines starting from your next c-store visit.</h2>
+    <div class="temp-btn-group" style="margin-top:40px;">
+      <button type="button" class="btn btn-primary btn-lg" id="learn">Learn More</button>
+      <button type="button" class="btn btn-primary btn-lg" id="store"> </button>
     </div>
   </div>
 </div>

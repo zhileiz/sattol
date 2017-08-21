@@ -8,5 +8,8 @@ module Blog
 
     def service
     end
+
+    def business
+    end
   end
 end
