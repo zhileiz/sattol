@@ -45,13 +45,29 @@
 
   function change(){
     if (counter % 2 == 0){
-        header.style.backgroundImage = "url('/assets/bg-2.png')";
-        h1.innerHTML = "Engage with your customers <br/> in real time";
-        h2.innerHTML = "UCheck helps you better understand their preferences and <br/> personalize recommendations during and after their visits";
+        // h1.innerHTML = "Engage with your customers <br/> in real time";
+        // h2.innerHTML = "UCheck helps you better understand their preferences and <br/> personalize recommendations during and after their visits";
+        $('#business-header').animate({opacity: 0}, 'fast', function() {
+          $(this).css({'background-image': 'url(/assets/bg-2.png)'}).animate({opacity: 1});
+        });
+        $('#business-info-h1').animate({'opacity': 0}, 600, function(){
+          $(this).html('Engage with your customers <br/> in real time').animate({'opacity': 1}, 400);
+        });
+        $('#business-info-h2').animate({'opacity': 0}, 600, function(){
+          $(this).html('UCheck helps you better understand their preferences and <br/> personalize recommendations during and after their visits').animate({'opacity': 1}, 400);
+        });
     } else {
-        header.style.backgroundImage = "url('/assets/bg-1.jpg')";
-        h1.innerHTML = "Save the checkout hassle <br/>for your customer";
-        h2.innerHTML = "UCheck lets your customers checkout on their phones within < 30s";
+        // h1.innerHTML = "Save the checkout hassle <br/>for your customer";
+        // h2.innerHTML = "UCheck lets your customers checkout on their phones within < 30s";
+        $('#business-header').animate({opacity: 0}, 'fast', function() {
+          $(this).css({'background-image': 'url(/assets/bg-1.jpg)'}).animate({opacity: 1});
+        });
+        $('#business-info-h1').animate({'opacity': 0}, 600, function(){
+          $(this).html('Save the checkout hassle <br/>for your customer').animate({'opacity': 1}, 400);
+        });
+        $('#business-info-h2').animate({'opacity': 0}, 600, function(){
+          $(this).html('UCheck lets your customers checkout on their phones within < 30s').animate({'opacity': 1}, 400);
+        });
     }
     counter++;
   }

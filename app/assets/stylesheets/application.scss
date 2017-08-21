@@ -124,10 +124,11 @@ float: none !important;
 }
 
 .section-title{
-  font-family: avenir-bold;
-  padding: 40px;
+  font-family: avenir-demi;
+  text-align: center;
   color:#750609;
   letter-spacing: 5px;
+  padding: 40px;
 }
 
 .section-1{
@@ -138,8 +139,9 @@ float: none !important;
     text-align: center;
     width: 200px;
     margin: auto;
+    margin-top: 30px;
     font-family: avenir-regular;
-
+    margin-bottom: 30px;
   }
   margin-bottom: 30px;
 }
@@ -151,9 +153,11 @@ float: none !important;
   }
   color:white;
   .exp-lang{
-    margin:10px;
-    margin-bottom:30px;
     font-family: avenir-regular;
+    max-width: 300px;
+    margin:auto;
+    margin-bottom:30px;
+    text-align: center;
   }
   padding-bottom: 40px;
 }
@@ -178,7 +182,7 @@ float: none !important;
 
 .footer{
     font-family: avenir-regular;
-  padding:20px;
+  padding:45px;
   background-color: #750609;
   color: white;
   p{
@@ -232,6 +236,13 @@ float: none !important;
     border: 3px solid white;
     color: #750609;
   }
+}
+
+.about-section{
+  padding: 40px;
+  background-image: url("/assets/about-bg.jpg");
+  background-size: auto 100%;
+  background-repeat: round;
 }
 
 #business-info-area{
