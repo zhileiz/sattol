@@ -17,7 +17,8 @@ float: none !important;
   height:90%;
   background-image: url("/assets/bg-1.jpg");
   background-size: auto 100%;
-  background-repeat: round;
+  background-position: center;
+  background-size: cover;
   .navbar{
     font-family: avenir-demi;
     z-index: 2;
@@ -241,8 +242,8 @@ float: none !important;
 .about-section{
   padding: 40px;
   background-image: url("/assets/about-bg.jpg");
-  background-size: auto 100%;
-  background-repeat: round;
+  background-position: center;
+  background-size: cover;
 }
 
 #business-info-area{
