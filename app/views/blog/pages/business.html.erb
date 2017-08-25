@@ -84,32 +84,32 @@
   </div>
   <div class="form-group row">
     <div class="col-6">
-      <input class="form-control" type="text" placeholder="Your Full Name" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Full Name" id="biz-person-text-input">
     </div>
     <div class="col-6">
-      <input class="form-control" type="text" placeholder="Your Business Name" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Business Name" id="biz-biz-text-input">
     </div>
   </div>
   <div class="form-group row">
     <div class="col-6">
-      <input class="form-control" type="text" placeholder="Your Email" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Email" id="biz-email-text-input">
     </div>
     <div class="col-6">
-      <input class="form-control" type="text" placeholder="Your Phone Number" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Phone Number" id="biz-phone-text-input">
     </div>
   </div>
   <div class="form-group row">
     <div class="col-12">
-      <input class="form-control" type="text" placeholder="Your Subject" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Subject" id="biz-subject-text-input">
     </div>
   </div>
   <div class="form-group">
-      <textarea class="form-control" id="exampleTextarea" placeholder="What do you want to tell us?" rows="3"></textarea>
+      <textarea class="form-control" id="biz-content-text-input" placeholder="What do you want to tell us?" rows="3"></textarea>
     </div>
 
   <div class="row" style="text-align:center;">
     <div class="col-12"style="text-align:center;">
-      <button type="button" class="btn btn-primary btn-lg">Send</button>
+      <button type="button" class="btn btn-primary btn-lg" onclick="sendBizFunc()">Send</button>
     </div>
   </div>
 </div>
@@ -144,3 +144,42 @@
     </div>
 </div>
 </div>
+
+<script src="https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-auth.js"></script>
+<script src="https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js"></script>
+<script src="https://cdn.wilddog.com/js/vendor/jquery-1.11.2.min.js"></script>
+<script>
+  console.log("into script");
+  var name = "";
+  var email = "";
+  var subject = "";
+  var content = "";
+  var config = {
+    syncURL: "https://wd2210417845oxhjls.wilddogio.com" //输入节点 URL
+  };
+  wilddog.initializeApp(config);
+  var ref = wilddog.sync().ref();
+  function sendBizFunc(){
+    name = document.getElementById('biz-person-text-input').value;
+    business = document.getElementById('biz-biz-text-input').value;
+    email = document.getElementById('biz-email-text-input').value;
+    phone = document.getElementById('biz-phone-text-input').value;
+    subject = document.getElementById('biz-subject-text-input').value;
+    content = document.getElementById('biz-content-text-input').value;
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+    console.log("subject: " + subject);
+    console.log("Content: " + content);
+    ref.push({
+      "biz-message":{
+        "name":name,
+        "email":email,
+        "business":business,
+        "phone":phone,
+        "subject":subject,
+        "content":content
+      }
+    });
+  }
+
+</script>
