@@ -84,23 +84,23 @@
   </div>
   <div class="form-group row">
     <div class="col-6">
-      <input class="form-control" type="text" placeholder="Your Name" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Name" id="name-text-input">
     </div>
     <div class="col-6">
-      <input class="form-control" type="text" placeholder="Your Email" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Email" id="email-text-input">
     </div>
   </div>
   <div class="form-group row">
     <div class="col-12">
-      <input class="form-control" type="text" placeholder="Your Subject" id="example-text-input">
+      <input class="form-control" type="text" placeholder="Your Subject" id="subject-text-input">
     </div>
   </div>
   <div class="form-group">
-      <textarea class="form-control" id="exampleTextarea" placeholder="What do you want to tell us?" rows="3"></textarea>
+      <textarea class="form-control" id="content-text-input" placeholder="What do you want to tell us?" rows="3"></textarea>
     </div>
   <div class="row" style="text-align:center;">
     <div class="col-12"style="text-align:center;">
-      <button type="button" class="btn btn-primary btn-lg">Send</button>
+      <button type="button" class="btn btn-primary btn-lg" onclick="sendFunc()">Send</button>
     </div>
   </div>
 </div>
@@ -135,3 +135,38 @@
     </div>
 </div>
 </div>
+
+<script src="https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-auth.js"></script>
+<script src="https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js"></script>
+<script src="https://cdn.wilddog.com/js/vendor/jquery-1.11.2.min.js"></script>
+<script>
+  console.log("into script");
+  var name = "";
+  var email = "";
+  var subject = "";
+  var content = "";
+  var config = {
+    syncURL: "https://wd2210417845oxhjls.wilddogio.com" //输入节点 URL
+  };
+  wilddog.initializeApp(config);
+  var ref = wilddog.sync().ref();
+  function sendFunc(){
+    name = document.getElementById('name-text-input').value;
+    email = document.getElementById('email-text-input').value;
+    subject = document.getElementById('subject-text-input').value;
+    content = document.getElementById('content-text-input').value;
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+    console.log("subject: " + subject);
+    console.log("Content: " + content);
+    ref.push({
+      "message":{
+        "name":name,
+        "email":email,
+        "subject":subject,
+        "content":content
+      }
+    });
+  }
+
+</script>
