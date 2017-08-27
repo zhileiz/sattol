@@ -1,0 +1,240 @@
+
+@media (max-width:768px) {
+ .new-header-area{
+   height:100%;
+   background-image: url("/assets/bg-1.jpg");
+   background-size: auto 100%;
+   background-position: center;
+   background-size: cover;
+   .navbar{
+     font-family: avenir-demi;
+     z-index: 2;
+     position: relative;
+     background:none;
+     max-width: 90%;
+     margin: auto;
+     padding: 2%;
+     .main-navbar-menu{
+      display: none;
+       .nav-link{
+         color:white;
+         margin-top: 20px;
+         padding-right: 40px;
+         font-size: 20px;
+         font-weight: 400;
+       }
+       .nav-link.active{
+         color: #750609;
+         font-weight: 800;
+       }
+     }
+     filter: grayscale(0);
+   }
+   .info-area{
+     width: 100%;
+     margin-top: 15%;
+     background: none;
+     color:white;
+     h1{
+       padding: 0rem 2rem;
+       width: 90%;
+       margin: auto;
+       font-size: 50px;
+       font-family: avenir-demi;
+     }
+     .line{
+       width: 100%;
+       height:5px;
+       background-color: #750609;
+       margin: 40px 0px;
+     }
+     h2{
+       font-size: 25px;
+       padding: 0rem 2rem;
+       width: 90%;
+       margin: auto;
+       font-family: avenir-regular;
+       letter-spacing: 1px;
+     }
+     .temp-btn-group{
+       padding: 0rem 2rem;
+       width: 90%;
+       margin: auto;
+       #learn{
+         font-size: 15px;
+         font-family: avenir-regular;
+         padding: 10px 30px;
+         background-color: #750609;
+         border: none;
+       }
+       #learn :hover{
+         background-color: #750609;
+         border: none;
+       }
+       #store{
+         height: 38px;
+         width: 138px;
+         background-image: url("/assets/appstore.png");
+         background-size: 100%;
+       }
+     }
+   }
+ }
+
+ #admin-navbar{
+   background-color: black;
+   .nav-link{
+     color: white;
+   }
+   .nav-link.active{
+     color: #750609;
+     font-weight: 800;
+   }
+ }
+
+ .post-each{
+   padding:10px;
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+   border-bottom: 1px solid #383838;
+ }
+
+ #form-desc-area{
+   height: 100px;
+ }
+
+ .pagination-top{
+   text-align: center;
+   width: 100%;
+ }
+
+ #home-header{
+   height:100%;
+ }
+
+ .section-title{
+   font-family: avenir-demi;
+   text-align: center;
+   color:#750609;
+   letter-spacing: 5px;
+   padding: 40px;
+ }
+
+ .section-1{
+   .col-4{
+     text-align: center;
+   }
+   .exp-lang{
+     text-align: center;
+     width: 200px;
+     margin: auto;
+     margin-top: 30px;
+     font-family: avenir-regular;
+     margin-bottom: 30px;
+   }
+   margin-bottom: 30px;
+ }
+
+ .section-2{
+   background-color: #750609;
+   .col-4{
+     text-align: center;
+   }
+   color:white;
+   .exp-lang{
+     font-family: avenir-regular;
+     max-width: 300px;
+     margin:auto;
+     margin-bottom:30px;
+     text-align: center;
+   }
+   padding-bottom: 40px;
+ }
+
+ #sc-2-title{
+   color: white;
+ }
+
+ .sc-2-icon{
+   font-size: 100px;
+ }
+
+ #admin-a-title{
+   color: white;
+ }
+
+ .exp-lang-title{
+   font-family: avenir-demi;
+   padding-bottom: 10px;
+   color:#750609;
+ }
+
+ .footer{
+   font-family: avenir-regular;
+   padding:45px;
+   background-color: #750609;
+   color: white;
+   p{
+     margin-bottom: 0px;
+   }
+   a{
+     color: white;
+   }
+ }
+
+ .form-section{
+   font-family: avenir-demi;
+   .section-title{
+     font-family: avenir-demi;
+     text-align: center;
+     color:#750609;
+   }
+   button{
+     background-color: #750609;
+     border:none;
+     padding:10px 50px;
+     letter-spacing: 1px;
+     font-family: avenir-regular;
+   }
+   input{
+     border: 3px solid #750609;
+     padding: 12px 15px;
+     border-radius: 0px;
+     line-height: 25px;
+   }
+   textarea{
+     border: 3px solid #750609;
+     border-radius: 0px;
+     padding: 12px 15px;
+     line-height: 25px;
+   }
+   padding-bottom: 30px;
+ }
+
+ .footer-input{
+   font-family: avenir-demi;
+   input{
+     border: 3px solid white;
+     border-radius: 0px;
+     background-color: #750609;
+     color: white;
+   }
+   .input-group-addon{
+     background-color: white;
+     border-radius: 0px;
+     border: 3px solid white;
+     color: #750609;
+   }
+ }
+
+ .about-section{
+   padding: 40px;
+   background-image: url("/assets/about-bg.jpg");
+   background-position: center;
+   background-size: cover;
+ }
+
+ #business-info-area{
+   margin-top: 12%;
+ }
+}
